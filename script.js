@@ -35,7 +35,7 @@ corrAns: "A6"
 
 let index =0;
 let currentQuestion = questions[index];
-
+let choicesEl = document.getElementById("choices");
 
 function startTheQuiz() {
   // start page handling
@@ -63,4 +63,16 @@ let questionEl = document.getElementById("question");
 
 questionEl.textContent = currentQuestion.question;
 
+choicesEl.innerHTML = "";
+
+for (let i=0; i <currentQuestion.choices.length; i++){
+
+  let choice =  currentQuestion.choices[i];
+  let choiceBtnEl = document.createElement('button');
+  choiceBtnEl.setAttribute('class','choice');
+  choiceBtnEl.setAttribute('value',  choice);
+  choiceBtnEl.textContent = i + 1 + '. ' + choice;
+
+  choicesEl.appendChild(choiceBtnEl);
+}
 }
