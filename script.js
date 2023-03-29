@@ -32,6 +32,11 @@ choices: ["A6",  "B6", "C6", "D6"],
 corrAns: "A6"
 },
 ];
+
+let index =0;
+let currentQuestion = questions[index];
+
+
 function startTheQuiz() {
   // start page handling
 startPageDivEl.setAttribute("class", "hide");
@@ -52,5 +57,10 @@ function OneSecTimerFunc() {
 }
 
 function showQuestion() {
-  console.log ("I  am here   in showQUestion")
+  
+currentQuestion = questions[index];
+let questionEl = document.getElementById("question");
+
+questionEl.textContent = currentQuestion.question;
+
 }
