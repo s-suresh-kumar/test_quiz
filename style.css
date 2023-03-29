@@ -8,3 +8,11 @@
   top: 12px;
   right: 12px;
 }
+
+.quiz-wrapper {
+  margin: 120px auto 0 auto;
+  max-width:550px;
+}
+.start-page-div {
+  text-align: center; 
+}
